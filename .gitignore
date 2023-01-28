@@ -1,0 +1,5 @@
+*.swp
+image-secrets
+payload/*
+pw
+set-env
