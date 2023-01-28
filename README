@@ -1,3 +1,24 @@
 secrets-thumbdriver
 
-automates the burning of a thumb drive with LUKS encryption of payload
+
+Overview
+--------
+
+Creates a disk-image file (image-secrets) within the current directory
+which is GUID-partitioned with a single LUKS-encrypted partition.
+You may then `dd` this file to a series of thumb-drives.
+
+
+How to use
+----------
+
+Clone this repo.
+
+Place the secrets you wish to have encrypted into the 'payload' directory.
+
+invoke `./secrets-thumbdriver`
+
+`dd` the resultant 'image-secrets' disk-image file to a device of your choice,
+for example:
+
+sudo dd if=image-secrets of=/dev/sda status=progress ; sudo sync
