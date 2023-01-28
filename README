@@ -5,12 +5,15 @@ Overview
 --------
 
 In English: this secrets-thumbdriver utility enables you to encrypt a group of
-files into a format which is then easy to write to a thumb-drive.
+files into a format which is then easy to write to a thumb-drive. When
+finished, the next time you insert your thumb-drive into a Linux desktop
+machine, you'll be prompted for your password, then be able to access your
+files.
 
 In Nerd: secrets-thumbdriver creates a disk-image file ('image-secrets')
 within the current directory which is GUID-partitioned with a single
-LUKS-encrypted partition whose contents are those you specify from a 'payload'
-directory. You may then `dd` this file to a series of thumb-drives.
+LUKS-encrypted vfat partition whose contents are files you specify from a
+'payload' directory. You may then `dd` this file to a series of thumb-drives.
 
 
 How to use
