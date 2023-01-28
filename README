@@ -4,9 +4,13 @@ secrets-thumbdriver
 Overview
 --------
 
-Creates a disk-image file ('image-secrets') within the current directory which
-is GUID-partitioned with a single LUKS-encrypted partition.  You may then `dd`
-this file to a series of thumb-drives.
+In English: this secrets-thumbdriver utility enables you to encrypt a group of
+files into a format which is then easy to write to a thumb-drive.
+
+In Nerd: secrets-thumbdriver creates a disk-image file ('image-secrets')
+within the current directory which is GUID-partitioned with a single
+LUKS-encrypted partition whose contents are those you specify from a 'payload'
+directory. You may then `dd` this file to a series of thumb-drives.
 
 
 How to use
